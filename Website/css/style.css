@@ -1,0 +1,684 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Global */
+
+body {
+	background-color:#e4d6bc;
+}
+
+h1, h2, h3 {
+	font-family: 'Handlee', cursive;
+}
+
+p {
+	font-family: 'Raleway', sans-serif;
+}
+
+#backToTop { /* Scroll til toppen knap https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top */
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    background-color: #ffad01; 
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+	padding: 15px 20px;
+    border-radius: 10px; /* Runde hjørner */
+}
+
+#backToTop:hover {
+	background-color:#c58500;
+    transition: background-color 0.2s ease; /* Baggrundsfarven skifter over 0.2s istedet for instant ved hover*/
+}
+
+/* Extra små enheder (telefoner, mindre end 768px) */
+/* Header */
+
+.navbar-brand {
+	height:10px;
+	width:10px;
+}
+
+#logo { /* Størrelse på logoet */
+    width: 169px;
+    height: 42px;
+	margin-top:10px;
+}
+
+.navbar-default { /* Højde og baggrundsfarve på menu */
+    height: 90px;
+	background-color: rgba(0, 0, 0, 0.7); /* Vi bruger rgba background color istedet for en hex color code, så vi kan få baggrunden gennemsigtig. Med opacity ville tekstindholdet osv også blive gennemsigtigt. */
+	-webkit-box-shadow: 0px 4px 19px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 4px 19px -5px rgba(0,0,0,0.75);
+	box-shadow: 0px 4px 19px -5px rgba(0,0,0,0.75);
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background: none; /* Fjerner bootstraps standard background color på menuknapperne */
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #fff; /* Tekstfarve i menuen */
+	text-transform: uppercase; /* Store bogstaver i menuen */
+    text-align: center; /* Text center i navbar-toggle */
+    padding: 20px 0px; /* Størrelse på knapperne i navbar-toggle */
+	font-weight:300; /* Vælger Raleway - Light */
+}
+
+.navbar-default .navbar-nav > li > a:visited { /* Besøgt link */
+	color:#fff;
+	
+}
+
+
+.navbar-default .navbar-nav > li > a:hover { /* Ved mouse-over */
+    color: #fff; /* Tekstfarve i menuen */
+	font-weight: 500;
+	transition: color 0.2s ease; /* Skifter farve over tid istedet for instant */
+}
+
+.navbar-right {
+	margin-top: 0px;
+	background-color: rgba(0, 0, 0, 0.75); /* Vi bruger rgba background color istedet for en hex color code, så vi kan få baggrunden gennemsigtig. Med opacity ville tekstindholdet osv også blive gennemsigtigt. */
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus { /* Navbar toggle styling ved hover/focus */
+  	background-color:#ffad01;
+}
+
+.navbar-default .navbar-toggle { /* Styling af navbar-toggle */
+    margin-top: 27px;
+}
+
+.navbar-default .navbar-toggle .icon-bar { /* Farven på de 3 linjer i navbar-toggle ikonet */
+    background-color: #fff;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form { /* Fjerner en default border */
+    border: none;
+	margin-top: 21px;
+}
+
+.nav > li:hover {
+    background-color:#ffad01;
+}
+
+/* Index.php */
+	
+	/* Intro */
+
+.intro {
+	background-image: url(../images/madlavning.jpg);
+	background-repeat: no-repeat;
+	height:750px;
+	background-size:cover;
+}
+
+.intro h1 { /* h1 øverst på forsiden */
+	color:#ffad01;
+	margin-top:200px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size:50px;
+}
+
+.intro h2 { /* h2 lige under h1 på forsiden */
+	color:#fff;
+	font-family: 'Raleway', sans-serif !important;
+	font-weight:400; /* Vælger Raleway - Regular */
+	text-transform: uppercase;
+	font-size:15px;
+	text-align: center;
+	margin-top:-5px;
+}
+
+.intro-btn { /* Call-to-action knappen i intro */
+	background-color:#ffad01;
+	text-align: center;
+	margin: auto;
+	width:200px;
+	border-radius: 15px; /* Runde hjørner på knappen */
+	transition: background-color 0.2s ease; /* Baggrundsfarven skifter over 0.2s istedet for instant ved hover*/
+	-webkit-box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.45); /* Skygge på knappen genereret fra https://www.cssmatic.com/box-shadow */
+	-moz-box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.45);   	/* Skygge på knappen genereret fra https://www.cssmatic.com/box-shadow */
+	box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.45);			/* Skygge på knappen genereret fra https://www.cssmatic.com/box-shadow */
+}
+
+.intro-btn a {
+	font-size:16px;
+	height:60px; /* Højden på knappen her istedet for .intro-btn, da det skal være klikbart */
+	display:block; /* Gør hele knappen til et link  istedet for kun teksten */
+	padding-top: 20px;
+	color:#fff;
+	margin-top: 40px;
+	font-weight: 600; /* Vælger Raleway - SemiBold */
+	text-decoration: none;
+}
+
+.intro-btn:hover {
+	background-color:#c58500;
+	
+}
+
+	/* Nyheder */
+
+.nyheder {
+	background-image: url(../images/hvid-bg.png);
+	background-repeat: repeat-x repeat-y;
+	padding-bottom:30px;
+}
+
+.nyheder img {
+	width:100%; /* Får billedet til at fylde helt ud til kanterne på xs display */
+} 
+
+.nyheder img:hover {
+	opacity: 0.85; /* % opacity ved hover */
+}
+
+.nyhed {
+	padding:0;
+	margin-top:5px;
+}
+
+.nyheder .col-xs-12 { 
+	padding:0; /* Får billedet til at fylde helt ud til kanterne */
+}
+
+.nyheder h2 { /* Overskrift til nyhed */
+	font-weight: 500; /* Vælger Raleway - medium */
+	font-size:24px;
+	margin-top:40px;
+	margin-left:15px;
+	margin-right:15px;
+	text-transform: uppercase;
+	color: #ffad01;
+}
+
+.nyheder p.dato  { /* Dato for nyheden */
+	color:#626262;
+	font-size: 18px;
+	margin-top: -10px;
+}
+
+.nyheder p { /* Styling bliver nedarvet til p.dato */
+	margin-left:15px;
+	margin-top: 25px;
+	margin-right:15px;
+	font-size:16px;
+	font-weight: 300; /* Vælger Raleway - Light */
+}
+
+.laes-mere a {
+	color:#ffad01;
+	font-size:18px;
+	margin-top: 20px;
+	
+}
+
+.laes-mere {
+	margin-bottom:40px;
+	margin-left:15px;
+}
+
+
+/* Menukort.php */
+
+.menukort-bg {
+	background-image:url(../images/menukort-bg.jpg);
+	background-repeat: no-repeat;
+	width:100%;
+}
+
+.menukort {
+	-webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75); /* Skygge fra https://www.cssmatic.com/box-shadow */
+	-moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+	background-image:url(../images/hvid-bg.png);
+	margin:auto; /* placerer menukortet i midten */
+	margin-top:150px;
+	margin-bottom:50px;
+	padding-bottom:50px;
+}
+
+.menukort h1 {
+	height:100%;
+	font-size:40px;
+	border-width: 3px;
+	text-transform: uppercase;
+	text-align: center; /* Centreret tekst */
+	margin:auto; /* Sætter indholdet i midten */
+	margin-top:30px;
+	color:#ffad01;
+}
+
+.menukort h2 {
+	font-size: 24px;
+	margin-top: 20px;
+	color:#ffad01;
+}
+
+.menukort ul {
+	font-weight:300;
+	list-style-type:none; /* Fjerner bullets */
+	padding-left:15px;
+}
+
+.menukort ul li:before { 
+	content: '\2014' ; /* Indsætter en bindestreg foran hver <li>*/
+	margin-left: -15px;
+	margin-right:10px;
+}
+
+.menukort li {
+	margin-top:5px; /* Linjeafstand mellem hvert liste-punkt */
+}
+
+.menukort img {
+	margin-top:20px;
+	width:100%;
+}
+
+.menukort .pris {
+	font-weight:600;
+}
+
+/* Om-foodfein.php */
+
+.om-foodfein-bg {
+	background-image:url(../images/menukort-bg.jpg);
+	background-repeat: no-repeat;
+	width:100%;
+}
+
+.om-foodfein {
+	-webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75); /* Skygge fra https://www.cssmatic.com/box-shadow */
+	-moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);    /* Skygge fra https://www.cssmatic.com/box-shadow */
+	box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);		   /* Skygge fra https://www.cssmatic.com/box-shadow */
+	background-image: url(../images/hvid-bg.png);
+	margin:auto;
+	margin-top:150px;
+	margin-bottom:50px;
+	padding-bottom:50px;
+}
+
+.om-foodfein h1 {
+	height:100%;
+	font-size:40px;
+	border-width: 3px;
+	text-transform: uppercase;
+	text-align: center; /* Centreret tekst */
+	margin:auto; /* Sætter indholdet i midten */
+	margin-top:30px;
+	color:#ffad01;
+}
+
+.om-foodfein h2, h3 { /* Farver på overskrifter */
+	color:#ffad01;
+}
+
+.om-foodfein-bg img {
+	margin-top:20px;
+	width:100%;
+}
+
+/* Kontakt.php*/
+
+.kontakt-bg {
+	background-image:url(../images/menukort-bg.jpg);
+	background-repeat: no-repeat;
+	width:100%;
+}
+.kontakt {
+	-webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75); /* Skygge fra https://www.cssmatic.com/box-shadow */
+	-moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+	background-image:url(../images/hvid-bg.png);
+	margin:auto; /* placerer menukortet i midten */
+	margin-top:150px;
+	margin-bottom:50px;
+	padding-bottom:50px;
+}
+
+.kontakt h1 {
+	height:100%;
+	font-size:40px;
+	border-width: 3px;
+	text-transform: uppercase;
+	text-align: center; /* Centreret tekst */
+	margin:auto; /* Sætter indholdet i midten */
+	margin-top:30px;
+	color:#ffad01;
+}
+
+.kontakt strong {
+	font-size:25px;
+	font-weight:100;
+	color:#ffad01;
+	font-family: 'Handlee', cursive;
+}
+
+.kontakt img {
+	margin-top:20px;
+}
+
+.kontakt-beskrivelse {
+	background-image:url(../images/foodfein-indgang.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height:400px;
+	padding: 0px 30px;
+	margin-top:20px;
+	margin-bottom:50px;
+}
+
+.kontakt-beskrivelse p {
+	color:#ffad01;
+	font-size:27px;
+	max-width:900px;
+	text-align: center;
+	margin:auto;
+	margin-top:100px;
+	font-family: 'Handlee', cursive !important;
+}
+
+.kontaktformular {
+	margin-top:20px;
+}
+
+.kontaktformular label {
+	font-weight:400; /* Vælger Raleway - Regular */
+}
+
+.kontaktformular .form-control {
+	border: solid #ffad01 1px; /* Border rundt om input felterne i kontaktformularen */
+	border-radius: 0; /* Skarme hjørner */ 
+}
+
+.kontaktformular .btn-default {
+    color: #fff;
+    background-color: #ffad01;
+    border:none;
+	min-width: 40px;
+	padding: 10px 45px;
+}
+
+.kontaktformular .btn-default:hover {
+	background-color:#c58500;
+	transition: background-color 0.2s; /* Baggrundsfarven skifter over 0.2s istedet for instant ved hover*/
+}
+
+.kontakt-info {
+	text-align: center;
+}
+
+.kontakt-info p {
+	font-size:16px;
+}
+
+.kontakt-info p a {
+	color:#000;
+}
+
+.gmaps {
+	margin-top:70px;
+	padding:0;
+}
+
+/* Kontakt-complete.php */
+.kontakt-complete {
+	-webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75); /* Skygge fra https://www.cssmatic.com/box-shadow */
+	-moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+	background-image:url(../images/hvid-bg.png);
+	margin:auto; /* placerer menukortet i midten */
+	margin-top:150px;
+	margin-bottom:50px;
+	height:550px;
+}
+
+.kontakt-complete h1 {
+	height:100%;
+	font-size:40px;
+	border-width: 3px;
+	text-transform: uppercase;
+	text-align: center; /* Centreret tekst */
+	margin:auto; /* Sætter indholdet i midten */
+	margin-top:200px;
+	color:#ffad01;
+}
+
+/* Footer */
+
+footer {
+	color:#fff;
+    width: 100%;
+    min-height: 130px;
+    background-color: #aea394;
+	-webkit-box-shadow: 0px -3px 12px -2px rgba(0,0,0,0.2); /* Skygge på footeren genereret fra https://www.cssmatic.com/box-shadow */
+	-moz-box-shadow: 0px -3px 12px -2px rgba(0,0,0,0.2);	/* Skygge på footeren genereret fra https://www.cssmatic.com/box-shadow */
+	box-shadow: 0px -3px 12px -2px rgba(0,0,0,0.2);         /* Skygge på footeren genereret fra https://www.cssmatic.com/box-shadow */
+}
+
+footer .footer-kontakt {
+	text-align: center;
+	margin:0;
+	padding:0;
+	margin-top:15px;
+}
+
+footer a {
+	color:#fff;
+	font-weight: 300; /* Vælger Raleway - Light */
+}
+
+footer a:hover {
+	color:#fff;
+	text-decoration: underline;
+}
+
+footer h2 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300; /* Vælger Raleway - Light */
+	text-transform: uppercase; /* Store bogstaver */
+	font-size:30px;
+	text-align: center;
+}
+
+footer p {
+	font-weight: 600; /* Vælger Raleway - SemiBold */
+}
+
+.social { /* Social media i footeren */
+	font-size:45px;
+	text-align: center;
+}
+
+.social a {
+	margin: 0px 5px;
+}
+
+.social a:hover {
+	color:#ffad01;
+	transition: color 0.1s; /* Skifter farve over tid istedet for instant */
+}
+
+.telefon { /* Telefonnummer i footeren */
+	font-weight:400; /* Vælger Raleway - Regular */
+	font-size:14px;
+	margin-bottom:20px;
+}
+
+.aabningstider { /* Åbningstider i footeren */
+	text-align: center;
+}
+
+.aabningstider p {
+	font-weight: 300; /* Vælger Raleway - Light */
+	line-height: 18px;
+	font-size:14px;
+}
+
+.aabningstider strong { /* Adressen for åbningstiden i footeren */
+	font-weight: 600; /* Vælger Raleway - SemiBold */
+	font-size:16px;
+}
+
+.kontrol-rapport { /* Kontrol rapport nederst til venstre */
+	position:fixed;
+	bottom:0;
+	left:0;
+	opacity:0.5;
+}
+
+.kontrol-rapport:hover {
+	opacity:1;
+}
+
+/* Små enheder (tablets, 768px og op) */
+@media (min-width: 768px) {
+	
+	/* Header */
+	
+	#logo { /* Størrelse på logoet */
+		width: 234px;
+		height: 57px;
+		margin-top:0;
+	}
+	
+	.navbar-right { /* fjerner baggrunden på knapperne */
+		background:none;
+	}
+	
+	.navbar-default .navbar-nav > li > a {
+		margin-right:25px;
+	}
+	
+	.navbar-default {
+	    border-bottom: none;
+	}
+	
+	.navbar-default .navbar-nav > li > a:hover { 
+		color: #ffad01; /* Tekstfarve i menuen */
+	}
+	
+	.nav > li:hover {  
+		background:none; /* Fjerner baggrundsfarven ved hover */
+	}
+	
+	/* Index.php */
+	.intro {
+		height:900px;
+	}
+	
+	.intro h1 {
+		margin-top:400px;
+	}
+	/* Nyheder */
+	
+	.nyheder img {
+		padding-left:25px;
+	}
+	
+	.nyheder h2, .nyheder p, .laes-mere { /* Samme margin på h2, p og a */
+		margin-left:25px;
+		margin-top: 0px;
+	}
+	
+	.nyheder p { /* En max bredde, så linjerne ikke bliver for lange */
+		max-width: 700px;
+	}
+	
+	.nyhed {
+		margin-top:30px;
+
+	}
+	
+	/* Kontakt.php */
+	.kontakt-beskrivelse {
+		height: 692px;
+		padding: 0px 30px;
+		margin-top: 20px;
+		margin-bottom: 50px;
+	}
+	
+
+	.kontakt-beskrivelse p {
+		color:#ffad01;
+		font-size:32px;
+		max-width:900px;
+		text-align: center;
+		margin:auto;
+		margin-top:300px;
+		font-family: 'Handlee', cursive !important;
+	}
+
+
+	/* Footer */
+	
+	footer {
+		height:230px;
+	}
+	
+	footer .footer-kontakt {
+		margin-top:0px;
+	}
+}
+
+/* Medium enheder (Desktops, 992x og op) */
+@media (min-width: 992px) {
+	
+	/* index.php */
+	
+	.intro {
+		height:1080px;
+	}
+	
+	.intro h1 {
+		margin-top:400px;
+	}
+	
+	/* kontakt.php */
+	.kontaktformular {
+		max-width:600px;
+	}
+	
+}
+
+/* Store devices (Store desktops, 1200px og op) */
+@media (min-width: 1200px) {
+	
+	
+	/* Index.php */
+	
+	/* Nyheder */
+	.nyheder p, .laes-mere, .nyheder h2 { /* Tekst redigering på nyhedernes brødtekst, links og overskrifter */
+		text-align: center;
+		margin-left:0px;
+		padding: 0px 35px;
+	}
+	
+	.nyhed {
+		text-align: center;
+	}
+	
+	.nyheder img {
+		padding-right:25px;
+		margin-top:10px;
+	}
+	
+	.nyheder h2 {
+		margin-top:35px;
+		font-size: 24px;
+		margin-left:0px;
+	}
+	
+	.laes-mere {
+		text-align: center;
+		padding-left:0;
+	}
+}
